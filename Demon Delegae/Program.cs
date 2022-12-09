@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Demon_Delegae
+namespace Demo_Delegate
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace Demon_Delegae
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form());
         }
     }
 }

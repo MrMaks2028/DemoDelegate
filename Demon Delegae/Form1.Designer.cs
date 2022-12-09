@@ -1,6 +1,6 @@
-﻿namespace Demon_Delegae
+﻿namespace Demo_Delegate
 {
-    partial class Form1
+    partial class FormFileSorter
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,20 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.labelFileContent = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Form1
+            // labelFileContent
+            // 
+            this.labelFileContent.AutoSize = true;
+            this.labelFileContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelFileContent.Location = new System.Drawing.Point(77, 42);
+            this.labelFileContent.Name = "labelFileContent";
+            this.labelFileContent.Size = new System.Drawing.Size(179, 20);
+            this.labelFileContent.TabIndex = 0;
+            this.labelFileContent.Text = "Содержимое файла";
+            // 
+            // FormFileSorter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form1";
+            this.Controls.Add(this.labelFileContent);
+            this.Name = "FormFileSorter";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label labelFileContent;
     }
 }
 

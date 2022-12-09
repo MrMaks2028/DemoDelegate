@@ -6,10 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Demon_Delegae
+namespace Demo_Delegate
 {
     delegate string str2str(string str);
-    internal class NumberSort
+    internal class NumbersSort
     {
         public string Content { get; }
         private string winFormRead(string filePath = "")
@@ -18,9 +18,22 @@ namespace Demon_Delegae
             filePath = string.Empty;
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.InitialDirectory = "c:\\";
+            openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            openFileDialog.FilterIndex = 2;
+            openFileDialog.RestoreDirectory = true;
 
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                filePath = openFileDialog.FileName;
+                var fileStream = openFileDialog.OpenFile();
+
+
+                StreamReader reader = new StreamReader(fileStream);
+                fileContent = reader.ReadToEnd();
+                reader.Close();
+            }
+            return fileContent;
         }
-
         private string consoleRead(string fileName)
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -29,18 +42,18 @@ namespace Demon_Delegae
             string fileContent = sr.ReadToEnd();
             sr.Close();
             return fileContent;
-        }
 
-        public NumberSort(string trigger = "")
+        }
+        public NumbersSort(string trigger = "")
         {
             str2str read;
-            if(trigger == "console")
+            if (trigger == "console")
             {
                 read = consoleRead;
             }
             else
             {
-                Content = winFormRead();
+                read = winFormRead;
             }
             Content = read?.Invoke("Numbers.txt");
         }

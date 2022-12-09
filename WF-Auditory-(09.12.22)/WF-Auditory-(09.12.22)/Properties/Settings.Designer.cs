@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Demo_Delegate.Properties
+namespace WF_Auditory__09._12._22_.Properties
 {
 
 

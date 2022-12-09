@@ -8,13 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Demon_Delegae
+namespace Demo_Delegate
 {
-    public partial class Form1 : Form
+    public partial class FormFileSorter : Form
     {
-        public Form1()
+        public FormFileSorter()
         {
             InitializeComponent();
+        }
+
+        private void FormFileSorter_DoubleClick(object sender, EventArgs e)
+        {
+            NumbersSort numbersSort = new NumbersSort();
+            labelFileContent.Text = numbersSort.Content;
         }
     }
 }

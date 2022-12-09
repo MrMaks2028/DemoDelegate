@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{749C9C68-CE5A-47BF-BFF5-2CF19136F548}</ProjectGuid>
+    <ProjectGuid>{56709B57-10B7-410D-B462-D890A019BD77}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Demon_Delegae</RootNamespace>
-    <AssemblyName>Demon Delegae</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <RootNamespace>WF_Auditory__09._12._22_</RootNamespace>
+    <AssemblyName>WF-Auditory-%2809.12.22%29</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -52,7 +52,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="NumbersSort.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
